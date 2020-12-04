@@ -1,0 +1,72 @@
+.hero_nosotros {
+    height: 48vh;
+    min-width: 670px;
+    place-content: center;
+    background: url("../imagenes/hero/hero_nosotros.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    ;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sostener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros {
+    padding: 1em;
+    margin: 1em;
+    background-color: $color-background-section;
+    border-radius: 1.5em;
+    text-align: center;
+    width: 80%;
+    min-width: 350px;
+}
+
+.about-us {
+    padding: 1em;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.nosotros p {
+    font-size: 1.4rem;
+    line-height: 2em;
+    font-weight: 600;
+    margin: 1.5em;
+    text-align: center;
+}
+
+.nosotros img {
+    width: 150px;
+    height: 150px;
+}
+
+.ruta {
+    padding: 1em;
+    margin: 1.5em;
+    font-size: 1rem;
+    line-height: 2em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.camino li {
+    padding: 0.3em;
+    line-height: 2.5em;
+    font-weight: 400 bold;
+    width: fit-content;
+    text-align: start;
+}

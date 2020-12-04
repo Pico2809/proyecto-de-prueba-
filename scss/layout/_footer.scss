@@ -1,0 +1,123 @@
+.container {
+    border-radius: 1.5em;
+}
+
+.container .contexto {
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+
+.contact {
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0.5em 0em;
+    width: 100%;
+    border-bottom: dashed;
+    text-align: center;
+}
+
+form {
+    display: flex;
+        flex-direction: column;
+
+    label {
+        display: none;
+    }
+
+    input, textarea {
+        font-size: .8em;
+        padding: .5em .5em; 
+        border-radius: .5em;
+        background: #f1f1f1;
+        border: none;
+        margin-bottom: 1em;
+        
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        background: white;
+    }
+
+    input::placeholder, textarea::placeholder {
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    input[type=submit] {
+        cursor: pointer;
+        color: $color-a;
+        font-size: 1em;
+        padding: 0.5em 1em;
+        font-weight: 600;
+        width: fit-content;
+        letter-spacing: 0.1em;
+        border-radius: 0.5em;
+        text-transform: uppercase;
+        background-color: #ff7044;
+    
+        &:hover {
+            background-color: #db603a ;
+        }
+    }
+}
+
+.left {
+    padding: 1em;
+    margin-top: 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    width: 45%;
+    text-align: center;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    textarea {
+            resize: none;
+            max-height: 150px;
+        }
+    input[type=submit] {
+            align-self: flex-end;
+        }
+}
+
+.right {
+    width: 45%;
+    text-align: center;
+    .news__subscribe {
+        padding: 0.5em;
+        margin: 0.5em 0em;
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: normal;
+        width: auto;
+        justify-content: center;
+    }
+    
+    .news input[type=email] {
+        height: 1.5em;
+    }
+
+    input[type=submit] {
+        cursor: pointer;
+        color: $color-a;
+        font-size: 1em;
+        padding: 0.5em 1em;
+        font-weight: 600;
+        width: fit-content;
+        letter-spacing: 0.1em;
+        border-radius: 0.5em;
+        text-transform: uppercase;
+        background-color: #ff7044;
+        box-shadow: none;
+
+    
+        &:hover {
+            background-color: #db603a ;
+        }
+    }
+}
+
+

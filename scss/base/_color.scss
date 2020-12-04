@@ -1,0 +1,15 @@
+$color-background: #e0e0a4;
+$color-background-section: #0099CC;
+$color-background-nav: #1c1c1c;
+$color-body: #212121;
+$color-a:#f1f1f1;
+
+body {
+    color: $color-body;
+    background-color: $color-background;
+}
+
+section{
+    background-color: $color-background-section;
+}
+

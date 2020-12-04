@@ -1,0 +1,64 @@
+.hero_consejos{
+
+    height: 48vh;
+    min-width: 670px;
+    place-content: center;
+    background: url("../imagenes/hero/hero_consejos.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;;
+    display: flex;
+        flex-direction: column;
+}
+
+
+
+.consejos {
+    padding: 1em;
+    margin: 1em;
+    background-color: $color-background-section;
+    border-radius: 1.5em;
+    text-align: center;
+    width: 80%;
+    min-width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .consejos__articulo h3 {
+        padding: 0.5em;
+        margin: 0.5em;
+        font-size: 2em;
+    }
+}
+
+.app {
+
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.app article {
+    width: 30%;
+    margin: 1em;
+}
+
+.app  h4  {
+    padding-top: 0.5em;
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: none;
+    color: $color-body;
+}
+
+.app  p  {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    color: $color-body;
+}

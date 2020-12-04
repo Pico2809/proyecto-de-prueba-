@@ -1,0 +1,30 @@
+.sm {
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 3.5em;
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    &iconify {
+        height: 35px;
+        }
+}
+.sm li a {
+    text-decoration: none;
+    color: $color-a;
+}
+
+.sm__icono{
+    transition: all 1s ease;  
+
+}
+
+.sm__icono:hover{
+    transform: rotate(360deg);
+    } 
+    
+
+ .sm li a span{
+     margin: 0;
+     padding: 0;
+ }   

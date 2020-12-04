@@ -1,0 +1,32 @@
+.post {
+    padding: 1em;
+    margin: 0.5em 4.5em;
+    border-radius: 1.5em;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+
+.post img {
+    cursor: pointer;
+    width: 100%;
+}
+
+.post img:hover {
+    filter: grayscale(80%);
+    box-shadow: 8px 8px 10px gray;
+}
+
+
+.hero_post{
+
+    height: 48vh;
+    min-width: 670px;
+    place-content: center;
+    background: url("../imagenes/hero/hero_post.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;;
+    display: flex;
+        flex-direction: column;
+}
