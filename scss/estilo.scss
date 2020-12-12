@@ -1,29 +1,27 @@
-@import "base/reset","base/tipografia","base/color";
-@import "layout/nav","layout/post","layout/card","layout/footer","layout/btn","layout/sm","layout/colaboradores","layout/consejos","layout/nosotros";
+@import "base/reset", "base/tipografia", "base/color";
+@import "layout/nav", "layout/post", "layout/card", "layout/footer", "layout/btn", "layout/sm", "layout/colaboradores", "layout/consejos", "layout/nosotros";
+@import "extend", "mixing";
 
-.titulo {
-    padding: 0.5em;
-    margin: 0.5em 0em;
-    font-size: 2em;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    font-weight: 900;
-    width: 100%;
-    border-bottom: dashed;
-    text-align: center;
-}
 
 img {
+    width: 100%;
     border-radius: 1em;
+    cursor: pointer;
 }
 
 .hero {
-    height: 48vh;
-    min-width: 670px;
-    place-content: center;
+    @extend %hero;
     background: url("../imagenes/hero/hero_index.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;;
+}
+
+
+.titulo {
+    @extend %titulo
+}
+
+.contenedor--complementos {
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

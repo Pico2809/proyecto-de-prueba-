@@ -1,22 +1,17 @@
 .hero_nosotros {
     height: 48vh;
-    min-width: 670px;
+    min-width: 375px;
     place-content: center;
     background: url("../imagenes/hero/hero_nosotros.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    ;
+    
     display: flex;
     flex-direction: column;
 }
 
 
-.sostener {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .nosotros {
     padding: 1em;
@@ -26,6 +21,17 @@
     text-align: center;
     width: 80%;
     min-width: 350px;
+    img {
+        width: 150px;
+        height: 150px;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 2em;
+        font-weight: 600;
+        margin: 1.5em;
+        text-align: center;
+    }
 }
 
 .about-us {
@@ -37,36 +43,75 @@
 
 }
 
-.nosotros p {
-    font-size: 1.4rem;
-    line-height: 2em;
-    font-weight: 600;
-    margin: 1.5em;
-    text-align: center;
-}
 
-.nosotros img {
-    width: 150px;
-    height: 150px;
-}
-
-.ruta {
+.experiencia{
     padding: 1em;
-    margin: 1.5em;
-    font-size: 1rem;
-    line-height: 2em;
-    font-weight: 600;
+    margin: 0.5em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+}
+.camino{
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    display: flex;
+        flex-direction: column;
+        li {
+            font-size: 1.2rem;
+            padding: 0.3em;
+            line-height: 2em;
+            font-weight: 600;
+            width: fit-content;
+            text-align: start;
+            list-style: square;
+            
+        }
 }
 
 
-.camino li {
-    padding: 0.3em;
-    line-height: 2.5em;
-    font-weight: 400 bold;
-    width: fit-content;
-    text-align: start;
+
+@media screen and (max-width:750px){
+    .sostener {
+        min-width: 400px;
+    }
+        p {
+            font-size: 1.4rem;
+            line-height: 2em;
+            font-weight: 600;
+            text-align: center;
+        }
+    
+    .about-us {
+        padding: 1em;
+        margin: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    
+    .experiencia{
+        padding: 1em;
+        margin: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .camino{
+        text-align: center;
+        display: flex;
+            flex-direction: column;
+            li {
+                font-size: 1.2rem;
+                padding: 0.3em;
+                line-height: 2em;
+                font-weight: 600;
+                width: fit-content;
+                text-align: start;
+                list-style: square;
+                
+            }
+    }
 }

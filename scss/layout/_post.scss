@@ -1,40 +1,122 @@
-.hero_post{
+.hero_post {
     height: 48vh;
-    min-width: 670px;
     place-content: center;
     background: url("../imagenes/hero/hero_post.jpg") no-repeat;
     background-size: cover;
-    background-position: center;;
+    background-position: center;
+    ;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 }
 
 .post {
     padding: 1em;
-    margin: 0.5em 4.5em;
-    border-radius: 1.5em;
-    display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-}
+    margin: 0.5em;
+    border-radius: 1em;
 
-.post img {
-    cursor: pointer;
-    width: 100%;
-}
+    &__container {
+        margin: 0 auto;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: space-between;
 
-.post img:hover {
-    filter: grayscale(80%);
-    box-shadow: 8px 8px 10px gray;
-}
-
-
-
-
-
-@media screen and (max-width: 1100px){
-    .post img {
-        margin: 0.5em;
     }
+
+    &__item {
+        width: 30%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__img {
+        transition: all 0.5s;
+    }
+
+    &__text {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        width: 100%;
+        font-size: 1.5em;
+        font-weight: 600;
+
+
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+
+        transform: translateY(100%);
+
+        transition: all 0.5s ease-out;
+    }
+
+    &__text h2 {
+        color: $color-a;
+    }
+
+    &__text p {
+        text-align: center;
+        font-size: 1em;
+        font-weight: 400;
+        font-style: italic;
+        color: $color-a;
+
+    }
+
+    &__item:hover .post__text {
+        transform: translateY(0%);
+    }
+
+    &__item:hover .post__img {
+        transform: scale(1.15);
+        filter: grayscale(80%);
+        box-shadow: 8px 8px 10px gray;
+    }
+}
+
+.post__text--hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 756px) {
+    .post {
+        &__container {
+            padding: 1em;
+            margin: 0.5em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            justify-items: center;
+        }
+
+        &__item {
+            margin: 1em;
+            width: 45%;
+            background-color: $color-a;
+            border-top-left-radius: 1.5em;
+            border-top-right-radius: 1.5em;
+        }
+
+        &__text{
+            display: none;
+        }
+
+
+        &__text--hidden {
+            text-align: center;
+            font-size: 2.3em;
+            font-weight: 400;
+            font-family: "lato";
+            color: $color-body;
+            display: flex;
+                justify-content: space-around;
+        }
+
+        &__item:hover .post__img {
+            transform: scale(1);
+            filter: grayscale(80%);
+        }
+    }
+
+
 }

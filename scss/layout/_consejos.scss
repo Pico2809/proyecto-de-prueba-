@@ -1,16 +1,20 @@
-.hero_consejos{
-
+.hero_consejos {
     height: 48vh;
-    min-width: 670px;
+    min-width: 375px;
     place-content: center;
     background: url("../imagenes/hero/hero_consejos.jpg") no-repeat;
     background-size: cover;
-    background-position: center;;
+    background-position: center;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 }
 
-
+.app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .consejos {
     padding: 1em;
@@ -21,31 +25,34 @@
     width: 80%;
     min-width: 350px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 
-    .consejos__articulo h3 {
+    &__container h3 {
         padding: 0.5em;
         margin: 0.5em;
         font-size: 2em;
     }
+    
+
+    &__picture img:hover {
+        cursor: pointer;
+        transform: scale(0.95);
+        box-shadow: 8px 8px 10px gray;
+    }
+
+
+    .consejos__picture {
+        width: 20%;
+        margin: 1em;
+        border-top-left-radius: 1.5em ;
+        border-top-right-radius: 1.5em ;
+
+    }
+
 }
-
-.app {
-
-    display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-}
-
-.app article {
-    width: 30%;
-    margin: 1em;
-}
-
-.app  h4  {
+.consejos__text h3 {
     padding-top: 0.5em;
     font-size: 1.6em;
     font-weight: 600;
@@ -54,11 +61,51 @@
     text-transform: none;
     color: $color-body;
 }
-
-.app  p  {
+.consejos__text p {
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: none;
     text-transform: none;
     color: $color-body;
 }
+
+
+
+
+
+@media screen and (max-width:854px){
+    .consejos .consejos__picture {
+        width: 30%
+    }
+    
+    .consejos__picture {
+        width: 100%;
+        margin: 2em;
+        background-color: $color-a;
+
+    }    
+    
+    .app {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        p {
+            padding: 1em;
+        }
+    }
+
+    .plataforma {
+        display: none;
+    }
+    
+    .link {
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+}
+

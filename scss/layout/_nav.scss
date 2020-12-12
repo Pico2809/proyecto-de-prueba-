@@ -22,7 +22,7 @@ header .contenedor {
 }
 
 header .contenedor h1 a {
-    color: #fff;
+    color: $color-a;
     font-size: 3.5rem;
 }
 
@@ -30,16 +30,16 @@ header ul {
     display: flex;
 }
 
-header ul li {
-    margin-left: 2rem;
-    padding: 0.2em;
+header ul a {
+    padding: 0.8em 1em;
 }
 
 header ul li a {
-    color: #fff;
+    color:$color-a;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
+
 }
 
 .icon {
@@ -50,13 +50,11 @@ nav li {
     display: inline-block;
     list-style: none;
 }
-nav li:hover .submenu {
-    display: block;
-    background-color: #005a87;
-}
-li:hover {
+
+nav a:hover {
     background-color: #058bce;
 }
+
 
 
 
@@ -70,6 +68,7 @@ li:hover {
         background: rgb(36, 113, 206);
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
         transition: left 0.5s;
+        z-index: 1;
     }
 
     #menu:target {

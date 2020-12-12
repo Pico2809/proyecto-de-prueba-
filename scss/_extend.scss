@@ -1,0 +1,20 @@
+%titulo{
+    padding: 0.5em;
+    margin: 0.5em 0em;
+    font-size: 2em;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: 900;
+    width: 100%;
+    border-bottom: dashed;
+    text-align: center;
+}
+
+%hero{
+height: 48vh;
+place-content: center;
+background-size: cover;
+background-position: center;
+display: flex;
+    flex-direction: column;
+}

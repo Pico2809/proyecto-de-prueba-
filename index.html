@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Viajar, viajes, vacaciones, turismo, vacaciones de verano 2021, vacaciones de invierno 2021, vacaciones 2021, turismo rural, cabotaje,feriados 2021, avión" >
+    <meta name="keywords"
+        content="Viajar, viajes, vacaciones, turismo, vacaciones de verano 2021, vacaciones de invierno 2021, vacaciones 2021, turismo rural, cabotaje,feriados 2021, avión">
     <title>Sperto-Comunidad de Viajes</title>
     <link rel="stylesheet" href="css/estilo.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -50,22 +51,54 @@
     <main>
 
         <section class="post">
-            <h2 class="titulo">Ultimos posteos</h2>
-            <a href="https://www.instagram.com/p/CIJtboQjQCt/" target="_blank"><img src="imagenes/post/mendoza.jpg"
-                    alt="Mendoza"></a>
-            <a href="https://www.instagram.com/p/CIJtSQOjy1i/" target="_blank"><img src="imagenes/post/santa_cruz.jpg"
-                    alt="Santa_Cruz"></a>
-            <a href="https://www.instagram.com/p/CIJtG0zDL78/" target="_blank"><img src="imagenes/post/san_juan.jpg"
-                    alt="San_Juan"></a>
+            <h1 class="titulo">Últimos Posteos</h1>
+            <div class="post__container">
+                <section class="post__item">
+                    <a href="https://www.instagram.com/p/CIJtboQjQCt/" target="_blank">
+                        <img src="imagenes/post/mendoza.jpg" alt="mendoza" class="post__img">
+                        <div class="post__text">
+                            <h2>Seguinos en Instagram</h2>
+                            <p>No te pierdas nuestros post en las redes</p>
+                        </div>
+
+                        <p class="post__text--hidden"> Ver en instagram</p>
+                    </a>
+
+                </section>
+                <section class="post__item">
+                    <a href="https://www.instagram.com/p/CIJtSQOjy1i/" target="_blank">
+                        <img src="imagenes/post/santa_cruz.jpg" alt="santa_cruz" class="post__img">
+                        <div class="post__text">
+                            <h2>Seguinos en Instagram</h2>
+                            <p>No te pierdas nuestros post en las redes</p>
+                        </div>
+
+                        <p class="post__text--hidden"> Ver en instagram</p>
+                    </a>
+                </section>
+
+                <section class="post__item">
+                    <a href="https://www.instagram.com/p/CIJtG0zDL78/" target="_blank">
+                        <img src="imagenes/post/san_juan.jpg" alt="san_juan" class="post__img">
+                        <div class="post__text">
+                            <h2>Seguinos en Instagram</h2>
+                            <p>No te pierdas nuestros post en las redes</p>
+                        </div>
+
+                        <p class="post__text--hidden"> Ver en instagram</p>
+                    </a>
+                </section>
         </section>
+
 
         <div class="agrupar-card ">
             <section class="card tip">
-                <h2 class="titulo">Tips de Viaje</h2>
+                <h2 class="titulo">Consejos</h2>
                 <article class="card__articulo">
                     <img src="imagenes/consejo.jpg" alt="tips">
                     <h3>¡Vas a descubrir la mejor forma de viajar!</h3>
-                    <p class="card__parrafo">Descuentos, consejos y toda la info práctica que necesitas para organizar
+                    <p class="card__parrafo">Descuentos, consejos y toda la info práctica que necesitas para
+                        organizar
                         tu próxima escapada. </p>
                 </article>
                 <a href="consejos/consejos.html" class="more">Ver más</a>
@@ -73,11 +106,12 @@
 
 
             <section class="card historia">
-                <h2 class="titulo">Compartí tu historia </h2>
+                <h2 class="titulo">Compartí tu Viaje </h2>
                 <article class="card__articulo">
                     <img src="imagenes/partner.jpg" alt="workshop">
                     <h3>¡Dejanos tu historia!</h3>
-                    <p class="card__parrafo"> Queremos conocerte y que todos conozcan tus viajes.Compartí con nosotros
+                    <p class="card__parrafo"> Queremos conocerte y que todos conozcan tus viajes.Compartí con
+                        nosotros
                         tus fotos, consejos y tips! </p>
                 </article>
                 <a href="colaboradores/colaboradores.html" class="more">Ver más</a>
@@ -88,7 +122,7 @@
 
     <footer>
         <section id="contact" class="container">
-            <h3 class="contact">Contactanos</h3>
+            <h3 class="titulo">Contactanos</h3>
             <div class="contexto">
 
                 <div class="left">
@@ -109,14 +143,8 @@
                 </form>
 
                 <div class="right">
-                    <section class="news">
-                        <h3 class="news__subscribe"> Suscribirte a nuestro Newsletter</h3>
-                        <input type="email" id="email" placeholder="ejemplo@gmail.com">
-                        <input type="submit" value="Enviar">
-                    </section>
 
-
-                    <ul id="media" class="sm">
+                    <ul id="media" class="social-media-list">
                         <li class="sm__icono">
                             <a href="https://www.youtube.com/" target="_blank" class="youtube">
                                 <span class="iconify youtube" data-icon="bx:bxl-youtube" data-inline="false"></span></a>

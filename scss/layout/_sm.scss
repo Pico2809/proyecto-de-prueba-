@@ -1,30 +1,91 @@
-.sm {
-    padding: 0.5em;
-    margin: 0.2em;
-    font-size: 3.5em;
-    display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-    &iconify {
-        height: 35px;
-        }
+.social-media-list {
+    margin: 1em;
+    position: relative;
+    font-size: 2.3rem;
+    text-align: center;
+    width: 100%;
 }
-.sm li a {
-    text-decoration: none;
+
+.social-media-list li a {
     color: $color-a;
 }
 
-.sm__icono{
-    transition: all 1s ease;  
-
+.social-media-list li {
+    position: relative;
+    top: 0;
+    left: -20px;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    margin: 10px auto;
+    line-height: 70px;
+    border-radius: 50%;
+    color: $color-a;
+    background-color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-.sm__icono:hover{
-    transform: rotate(360deg);
-    } 
-    
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px $color-a;
+    transition: all .2s ease-in-out;
+}
 
- .sm li a span{
-     margin: 0;
-     padding: 0;
- }   
+.social-media-list li:hover {
+    background-color: $color-a;
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+}
+
+.social-media-list li:hover a {
+    color:$color-background-nav;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+    
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+
+    .social-media-list {
+        left: 0;
+    }
+
+    .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+    }
+
+    .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+
+}

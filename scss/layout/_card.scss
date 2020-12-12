@@ -2,7 +2,10 @@
     padding: 1em;
     margin: 0.5em;
     display: flex;
-    justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
 }
 
 .card {
@@ -11,9 +14,9 @@
     border-radius: 1.5em;
     text-align: center;
     width: 45%;
-    min-width: 350px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
 
     &__articulo {
@@ -34,24 +37,50 @@
     }
 }
 
-img {
-    width: 100%;
-}
 
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 950px) {
     .agrupar-card {
+        padding: 0em;
+        margin: 0.5em;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
     }
-
+    
     .card {
-        margin: 1em;
+        background-color: $color-background-section;
+        border-radius: 1.5em;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+    
+        &__articulo {
+            padding: 0.5em;
+            margin: 1em 0em;
+            text-align: center;
+        }
+    
+        &__articulo h3 {
+            font-size: 3em;
+            font-weight: 600 ;
+        }
+    
+        &__parrafo {
+            margin: 0.5em 0em;
+            font-size: 2.5em;
+            font-weight: 400 ;
+        }
+        .more{
+            font-size: 2em;
+        }
+    }
+    .historia{
+        margin-top: 0.5em;
     }
 
-    .card .titulo {
-        font: 10.5em;
-    }
 }

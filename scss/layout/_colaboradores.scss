@@ -1,11 +1,11 @@
 .hero_colaboradores{
 
     height: 48vh;
-    min-width: 670px;
+    min-width: 375px;
     place-content: center;
     background: url("../imagenes/hero/hero_colaboradores.jpg") no-repeat;
     background-size: cover;
-    background-position: center;;
+    background-position: center;
     display: flex;
         flex-direction: column;
 }
@@ -35,4 +35,30 @@
             font-style: italic;
         }
 
+}
+
+
+@media screen and (max-width:1152px){
+    .colaboradores__picture{
+        padding: 1em;
+        margin: 1em;
+    }
+}
+
+@media screen and (max-width:870px){
+    .colaboradores__picture{
+        padding: 1em;
+        margin: 1em;
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+    }
+    .equipo {
+        font-size: 2em;
+        padding: 0.5em;
+        margin: 0.5em 0em;
+        width: 100%;
+        border-bottom: dashed;
+        text-align: center;
+    }
 }
