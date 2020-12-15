@@ -1,12 +1,11 @@
 @import "base/reset", "base/tipografia", "base/color";
 @import "layout/nav", "layout/post", "layout/card", "layout/footer", "layout/btn", "layout/sm", "layout/colaboradores", "layout/consejos", "layout/nosotros";
-@import "extend", "mixing";
+@import "extend";
 
 
 img {
     width: 100%;
     border-radius: 1em;
-    cursor: pointer;
 }
 
 .hero {

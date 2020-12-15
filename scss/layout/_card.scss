@@ -66,21 +66,34 @@
         }
     
         &__articulo h3 {
-            font-size: 3em;
+            font-size: 2em;
             font-weight: 600 ;
         }
     
         &__parrafo {
             margin: 0.5em 0em;
-            font-size: 2.5em;
-            font-weight: 400 ;
-        }
-        .more{
             font-size: 2em;
+            font-weight: 400 ;
         }
     }
     .historia{
         margin-top: 0.5em;
     }
 
+}
+
+
+@media screen and (max-width: 650px){
+    .card {
+        &__articulo h3 {
+            font-size: 1.5em;
+            font-weight: 600 ;
+        }
+    
+        &__parrafo {
+            margin: 0.5em 0em;
+            font-size: 1.5em;
+            font-weight: 400 ;
+        }
+}
 }

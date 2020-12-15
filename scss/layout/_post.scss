@@ -4,7 +4,6 @@
     background: url("../imagenes/hero/hero_post.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    ;
     display: flex;
     flex-direction: column;
 }
@@ -79,13 +78,14 @@
 }
 
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 666px) {
     .post {
         &__container {
             padding: 1em;
             margin: 0.5em;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             justify-items: center;
         }
 
@@ -93,18 +93,22 @@
             margin: 1em;
             width: 45%;
             background-color: $color-a;
-            border-top-left-radius: 1.5em;
-            border-top-right-radius: 1.5em;
+            display: grid;
+                place-items: center;
         }
 
         &__text{
             display: none;
         }
 
+        &__img {
+            border-radius: 0em;
+        }
+
 
         &__text--hidden {
             text-align: center;
-            font-size: 2.3em;
+            font-size: 2em;
             font-weight: 400;
             font-family: "lato";
             color: $color-body;

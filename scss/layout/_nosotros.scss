@@ -1,6 +1,5 @@
 .hero_nosotros {
     height: 48vh;
-    min-width: 375px;
     place-content: center;
     background: url("../imagenes/hero/hero_nosotros.jpg") no-repeat;
     background-size: cover;
@@ -11,8 +10,6 @@
 }
 
 
-
-
 .nosotros {
     padding: 1em;
     margin: 1em;
@@ -21,10 +18,6 @@
     text-align: center;
     width: 80%;
     min-width: 350px;
-    img {
-        width: 150px;
-        height: 150px;
-    }
     p {
         font-size: 1.4rem;
         line-height: 2em;
@@ -50,6 +43,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &__text{
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
 }
 .camino{
     padding: 1em;
@@ -65,10 +64,15 @@
             width: fit-content;
             text-align: start;
             list-style: square;
-            
+        }
+        li:hover{
+            background-color:#058bce;
         }
 }
 
+.camino__img{
+    display: none;
+}
 
 
 @media screen and (max-width:750px){
@@ -113,5 +117,12 @@
                 list-style: square;
                 
             }
+    }
+    .ruta{
+        display: none;
+    }
+
+    .camino__img{
+        display: flex;
     }
 }

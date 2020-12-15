@@ -241,29 +241,34 @@ nav a:hover {
   display: none;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 666px) {
   .post__container {
     padding: 1em;
     margin: 0.5em;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1rem;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
   }
   .post__item {
     margin: 1em;
     width: 45%;
     background-color: #f1f1f1;
-    border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
   }
   .post__text {
     display: none;
   }
+  .post__img {
+    border-radius: 0em;
+  }
   .post__text--hidden {
     text-align: center;
-    font-size: 2.3em;
+    font-size: 2em;
     font-weight: 400;
     font-family: "lato";
     color: #212121;
@@ -380,19 +385,28 @@ nav a:hover {
     text-align: center;
   }
   .card__articulo h3 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
   }
   .card__parrafo {
     margin: 0.5em 0em;
-    font-size: 2.5em;
-    font-weight: 400;
-  }
-  .card .more {
     font-size: 2em;
+    font-weight: 400;
   }
   .historia {
     margin-top: 0.5em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card__articulo h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .card__parrafo {
+    margin: 0.5em 0em;
+    font-size: 1.5em;
+    font-weight: 400;
   }
 }
 
@@ -526,7 +540,6 @@ form input[type=submit]:hover {
 
 @media screen and (max-width: 750px) {
   .container .contexto {
-    min-width: 420px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -554,7 +567,7 @@ form input[type=submit]:hover {
 
 .more {
   color: #f1f1f1;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 0.5em 1em;
   font-weight: 600;
   width: -webkit-fit-content;
@@ -569,6 +582,13 @@ form input[type=submit]:hover {
 
 .more:hover {
   background-color: #db603a;
+}
+
+@media screen and (max-width: 650px) {
+  .more {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
 }
 
 .social-media-list {
@@ -663,7 +683,6 @@ form input[type=submit]:hover {
 
 .hero_colaboradores {
   height: 48vh;
-  min-width: 375px;
   place-content: center;
   background: url("../imagenes/hero/hero_colaboradores.jpg") no-repeat;
   background-size: cover;
@@ -699,6 +718,15 @@ form input[type=submit]:hover {
           align-items: center;
 }
 
+.colaboradores p {
+  padding: 0.5em;
+  margin: 0em 0.5em;
+  width: 83%;
+  font-size: 2em;
+  font-weight: 600;
+  color: #212121;
+}
+
 .colaboradores__picture img:hover {
   cursor: pointer;
   -webkit-transform: scale(0.95);
@@ -707,7 +735,7 @@ form input[type=submit]:hover {
           box-shadow: 8px 8px 10px gray;
 }
 
-.colaboradores__picture h4 {
+.colaboradores__picture h3 {
   padding: 0.2em;
   font-size: 3em;
   font-weight: 600;
@@ -723,6 +751,13 @@ form input[type=submit]:hover {
 }
 
 @media screen and (max-width: 870px) {
+  .colaboradores p {
+    padding: 0.5em;
+    margin: 0em 0.5em;
+    width: 83%;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
   .colaboradores__picture {
     padding: 1em;
     margin: 1em;
@@ -746,9 +781,37 @@ form input[type=submit]:hover {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .colaboradores {
+    padding-top: 0em;
+    margin: 0em;
+    margin-top: 0.5em;
+  }
+  .colaboradores__picture {
+    padding: 0em;
+    margin: 0em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .colaboradores__picture h4 {
+    padding: 0em 1em 1em;
+    margin: 0em 0.5em 0.5em;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+}
+
 .hero_consejos {
   height: 48vh;
-  min-width: 375px;
   place-content: center;
   background: url("../imagenes/hero/hero_consejos.jpg") no-repeat;
   background-size: cover;
@@ -784,7 +847,6 @@ form input[type=submit]:hover {
   border-radius: 1.5em;
   text-align: center;
   width: 80%;
-  min-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -839,13 +901,21 @@ form input[type=submit]:hover {
 }
 
 @media screen and (max-width: 854px) {
+  .contenedor--complementos {
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+  }
+  .consejos {
+    padding: 1em;
+    margin: 1em;
+    background-color: #0099CC;
+    border-radius: 1.5em;
+    text-align: center;
+    width: 100%;
+  }
   .consejos .consejos__picture {
     width: 30%;
-  }
-  .consejos__picture {
-    width: 100%;
-    margin: 2em;
-    background-color: #f1f1f1;
   }
   .app {
     display: -webkit-box;
@@ -859,9 +929,6 @@ form input[type=submit]:hover {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  .app p {
-    padding: 1em;
   }
   .plataforma {
     display: none;
@@ -880,11 +947,17 @@ form input[type=submit]:hover {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .consejos__text p {
+    padding-top: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.6em;
+    color: #212121;
+  }
 }
 
 .hero_nosotros {
   height: 48vh;
-  min-width: 375px;
   place-content: center;
   background: url("../imagenes/hero/hero_nosotros.jpg") no-repeat;
   background-size: cover;
@@ -906,11 +979,6 @@ form input[type=submit]:hover {
   text-align: center;
   width: 80%;
   min-width: 350px;
-}
-
-.nosotros img {
-  width: 150px;
-  height: 150px;
 }
 
 .nosotros p {
@@ -951,6 +1019,19 @@ form input[type=submit]:hover {
           align-items: center;
 }
 
+.experiencia__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .camino {
   padding: 1em;
   margin: 1em;
@@ -974,6 +1055,14 @@ form input[type=submit]:hover {
   width: fit-content;
   text-align: start;
   list-style: square;
+}
+
+.camino li:hover {
+  background-color: #058bce;
+}
+
+.camino__img {
+  display: none;
 }
 
 @media screen and (max-width: 750px) {
@@ -1035,6 +1124,14 @@ form input[type=submit]:hover {
     text-align: start;
     list-style: square;
   }
+  .ruta {
+    display: none;
+  }
+  .camino__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .titulo {
@@ -1066,7 +1163,6 @@ form input[type=submit]:hover {
 img {
   width: 100%;
   border-radius: 1em;
-  cursor: pointer;
 }
 
 .hero {

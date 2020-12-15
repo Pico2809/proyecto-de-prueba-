@@ -1,6 +1,5 @@
 .hero_consejos {
     height: 48vh;
-    min-width: 375px;
     place-content: center;
     background: url("../imagenes/hero/hero_consejos.jpg") no-repeat;
     background-size: cover;
@@ -23,7 +22,6 @@
     border-radius: 1.5em;
     text-align: center;
     width: 80%;
-    min-width: 350px;
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -74,26 +72,29 @@
 
 
 @media screen and (max-width:854px){
+    .contenedor--complementos{
+        margin:0;
+        padding: 0.5em;
+        width: 100%;
+    }
+    .consejos {
+        padding: 1em;
+        margin: 1em;
+        background-color: $color-background-section;
+        border-radius: 1.5em;
+        text-align: center;
+        width: 100%;
+    }
+    
     .consejos .consejos__picture {
         width: 30%
     }
-    
-    .consejos__picture {
-        width: 100%;
-        margin: 2em;
-        background-color: $color-a;
-
-    }    
-    
+        
     .app {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-
-        p {
-            padding: 1em;
-        }
     }
 
     .plataforma {
@@ -107,5 +108,13 @@
         flex-wrap: nowrap;
         justify-content: space-around;
     }
+    .consejos__text p {
+        padding-top: 1em;
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 1.6em;
+        color: $color-body;
+    }
+    
 }
 
